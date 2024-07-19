@@ -2,9 +2,9 @@ import React from "react";
 import { commerce } from "../../lib/commerce";
 import { FaShoppingCart } from "react-icons/fa";
 
-function Product({ product }) {
+function Product({ product, onAddToCart }) {
   return (
-    <div className="h-[350px] w-56 flex justify-center flex-col border rounded-md shadow-lg gap-y-2">
+    <div className="bg-white h-[350px] w-56 flex justify-center flex-col border rounded-md shadow-lg gap-y-2">
       <div className="h-40">
         <img
           src={product.image.url}
@@ -23,7 +23,10 @@ function Product({ product }) {
           dangerouslySetInnerHTML={{ __html: product.description }}
         ></p>
       </div>
-      <button className="justify-self-end self-end btn btn-sm bg-secondary hover:bg-secondary/50 mb-2 mr-2">
+      <button
+        className="justify-self-end self-end btn btn-sm bg-secondary hover:bg-secondary/50 mb-2 mr-2"
+        onClick={(e) => onAddToCart(product.id, 1)}
+      >
         <FaShoppingCart className="text-white" />
       </button>
       {/* <div className="flex flex-col w-full">

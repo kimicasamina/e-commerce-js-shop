@@ -9,6 +9,7 @@ export default {
       shadow: "hsl(var(--shadow) / <alpha-value>)",
       background: "hsl(var(--background) / <alpha-value>)",
       white: "hsl(var(--white) / <alpha-value>)",
+      alert: "hsl(var(--alert) / <alpha-value>)",
     },
     fontFamily: {
       inter: ["Inter", "sans-serif"],
