@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Products from "./components/Products/Products";
+import Navbar from "./components/Navbar";
 import { commerce } from "./lib/commerce";
 
 function App() {
@@ -17,10 +18,10 @@ function App() {
   console.log(products);
 
   return (
-    <>
-      <h1 className="text-2xl">E-Commerce Website</h1>
-      <Products />
-    </>
+    <main className="bg-background w-full min-h-screen">
+      <Navbar />
+      <Products products={products} />
+    </main>
   );
 }
 
