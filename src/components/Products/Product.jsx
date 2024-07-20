@@ -4,7 +4,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 function Product({ product, onAddToCart }) {
   return (
-    <div className="bg-white h-[350px] w-56 flex justify-center flex-col border rounded-md shadow-lg gap-y-2">
+    <div className="bg-white h-[350px] w-56 flex justify-center flex-col border rounded-md shadow-md gap-y-2">
       <div className="h-40">
         <img
           src={product.image.url}
